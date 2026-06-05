@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        body{
+            background:#f8eaea;
+            font-family:"Times New Roman", serif;
+        }
+
+        .container{
+            width:700px;
+            margin:20px auto;
+            background:#f8eaea;
+            border:1px solid #999;
+            padding:25px;
+        }
+
+        h1{
+            text-align:center;
+            font-size:48px;
+            margin-bottom:20px;
+        }
+
+        table{
+            width:100%;
+        }
+
+        td{
+            padding:8px;
+            font-size:24px;
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=file],
+        textarea,
+        select{
+            width:100%;
+            padding:5px;
+            border:1px solid #999;
+            box-sizing:border-box;
+        }
+
+        textarea{
+            height:80px;
+        }
+
+        .btn{
+            text-align:center;
+        }
+
+        button{
+            padding:8px 20px;
+            font-size:18px;
+            cursor:pointer;
+        }
+    </style>
+
+    <script>
+        function showMessage() {
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Student Registration Form</h1>
+
+<form onsubmit="return showMessage()" enctype="multipart/form-data">
+
+<table>
+
+<tr>
+    <td>Roll No :</td>
+    <td><input type="text" required></td>
+</tr>
+
+<tr>
+    <td>Student Name :</td>
+    <td>
+        <input type="text" placeholder="First Name" style="width:48%;" required>
+        <input type="text" placeholder="Last Name" style="width:48%;" required>
+    </td>
+</tr>
+
+<tr>
+    <td>Father's Name :</td>
+    <td><input type="text" required></td>
+</tr>
+
+<tr>
+    <td>Date of Birth :</td>
+    <td>
+        <input type="text" placeholder="Day" style="width:20%;" required>
+        <input type="text" placeholder="Month" style="width:20%;" required>
+        <input type="text" placeholder="Year" style="width:20%;" required>
+        (DD-MM-YYYY)
+    </td>
+</tr>
+
+<tr>
+    <td>Mobile No :</td>
+    <td>
+        <input type="text" value="+91" style="width:10%;" readonly>
+        <input type="text" style="width:80%;" required>
+    </td>
+</tr>
+
+<tr>
+    <td>Email ID :</td>
+    <td>
+        <input type="email" placeholder="Optional">
+    </td>
+</tr>
+
+<tr>
+    <td>Password :</td>
+    <td><input type="password" required></td>
+</tr>
+
+<tr>
+    <td>Gender :</td>
+    <td>
+        <input type="radio" name="gender" required> Male
+        <input type="radio" name="gender"> Female
+    </td>
+</tr>
+
+<tr>
+    <td>Department :</td>
+    <td>
+        <input type="checkbox"> CSE
+        <input type="checkbox"> IT
+        <input type="checkbox"> ECE
+        <input type="checkbox"> Civil
+        <input type="checkbox"> Mech
+    </td>
+</tr>
+
+<tr>
+    <td>Course :</td>
+    <td>
+        <select required>
+            <option value="">Select Current Course</option>
+            <option>BCA</option>
+            <option>B.Tech</option>
+            <option>B.Sc</option>
+            <option>MCA</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Student Photo :</td>
+    <td><input type="file" required></td>
+</tr>
+
+<tr>
+    <td>City :</td>
+    <td><input type="text" required></td>
+</tr>
+
+<tr>
+    <td>Address :</td>
+    <td><textarea required></textarea></td>
+</tr>
+
+<tr>
+    <td colspan="2" class="btn">
+        <button type="submit">Register</button>
+    </td>
+</tr>
+
+</table>
+
+</form>
+
+</div>
+
+</body>
+</html>
